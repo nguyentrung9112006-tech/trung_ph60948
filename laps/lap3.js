@@ -1,19 +1,17 @@
-// Function 1
-function multiply(a, b) {
-    return a * b;
-}
+// Bài 1
+const multiply = (a, b) => a * b;
+const isPositive = (number) => number >= 0;
+const getRandomNumber = () => Math.random();
 
-// Function 2
-function isPositive(number) {
-    return number >= 0;
-}
-
-// Function 3
-function getRandomNumber() {
-    return Math.random();
-}
-
-// Function 4
-document.addEventListener("click", function () {
+document.addEventListener("click", () => {
     console.log("Clicked!");
 });
+// Bài 2
+const createUser = (name = "trung", age = 18, isFinite = false) => {
+    return {
+        name,
+        age,
+        isFinite,
+    };
+};
+console.log(createUser());
