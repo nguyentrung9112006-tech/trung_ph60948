@@ -19,19 +19,12 @@ const user = {
 };
 
 const {
-    personalInfo: {
-        name,
-        contact: { email },
-    },
-} = user;
+    personalInfo: { name, email, phone },
+} = contact;
+console.log(email, phone);
 
-function getUserInfo(user) {
-    const {
-        personalInfo: {
-            name,
-            contact: { email },
-        },
-    } = user;
+function getUserInfo({ name, email, phone = "Unknown" }) {
+    console.log(`name: ${name} email: ${email} sdt: ${phone}`);
 }
 
 console.log(getUserInfo(user));
